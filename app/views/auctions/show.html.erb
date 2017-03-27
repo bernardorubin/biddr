@@ -1,0 +1,38 @@
+<h1>Auction Show</h1>
+<h2><%= @auction.title %></h2>
+<div class="row">
+  <div class="col s6">
+    <p>
+    <%= @auction.description %> <br>
+    End Date <%= @auction.endson.strftime('%Y-%B-%d') %> <br>
+    Reserve Price<%= @auction.reserveprice %>
+    </p>
+  </div>
+  <div class="col s6">
+  <p> Current Price </p>
+  <p> Reserve Price Met or Not Met </p>
+  </div>
+</div>
+<div class="row">
+
+</div>
+
+
+<div class="row">
+  <%= simple_form_for [@auction, @bid] do |f| %>
+  <%= f.input :bid %>
+  <%= f.submit :submit %>
+  <% end %>
+</div>
+
+<div class="row">
+<% @auction.bids.each do |bid| %>
+<%  @username = User.find bid.user_id %>
+  Bid by:  <%= @username.email %>
+  <%= bid.bid %>
+  <%# if can?(:manage, bid) %>
+    <%= link_to 'delete', bid_path(bid), method: :delete, data:{ confirm: 'Are You Sure?'}  %>
+  <%# end  %>
+    <hr>
+<% end  %>
+</div>

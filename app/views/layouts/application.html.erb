@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Biddr</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+  </head>
+
+  <body>
+    <%= render "layouts/navbar" %>
+
+  <div class="container">
+    <% if notice %>
+    <div class="card-panel teal lighten-2"><%= notice %></div>
+    <% elsif alert %>
+    <div class="card-panel amber darken-1"><%= alert %></div>
+    <% end %>
+  </div>
+    <div class="container">
+    <%= yield %>
+    </div>
+  </body>
+</html>
