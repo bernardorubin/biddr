@@ -9,8 +9,7 @@ class BidsController < ApplicationController
     @bid.user         = current_user
     @username         = User.find @auction.user_id
     if @bid.bid >= @auction.reserveprice
-      puts 'hello'
-      @auction.metreserve!
+      @auction.metreserve
     end
     if @bid.save
       @auction.currentprice = @bid.bid

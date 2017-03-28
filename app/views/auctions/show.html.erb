@@ -11,10 +11,10 @@
   </div>
   <div class="col s6">
   <p> Current Price <%= @auction.currentprice %> </p>
-  <% if @auction.currentprice < @auction.reserveprice %>
-    <p> Reserve Price Not Met</p>
-  <% else %>
+  <% if @auction.reservemet? %>
     <p> Reserve Price Met! </p>
+  <% else %>
+    <p> Reserve Price Not Met</p>
   <% end %>
   </div>
 </div>

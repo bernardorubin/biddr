@@ -20,7 +20,7 @@ class Auction < ApplicationRecord
     end
 
     event :metreserve do
-      transitions from: :published, to: :reservemet
+      transitions from: :draft, to: :reservemet
     end
 
     event :metreservenot do
