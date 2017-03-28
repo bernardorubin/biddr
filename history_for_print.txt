@@ -1,0 +1,504 @@
+history > history_for_print.txt
+
+
+
+   67  gpush
+   68  ls
+   69  ls
+   70  ls
+   71  rs
+   72  rails g controller stocks
+   73  rails g controller currencies
+   74  rails d controller main
+   75  rails destroy controller main
+   76  git log
+   77  ga
+   78  gc "removed main controller"
+   79  git log
+   80  git checkout
+   81  git checkout d
+   82  git checkout 8a475814a81f338da18749b54cb66e6f23d709fa
+   83  git checkout c16e2e5b1d3fa305779fd7714566199e4fb02227
+   84  git reset --hard origin/master
+   85  git checkout c16e2e5b1d3fa305779fd7714566199e4fb02227
+   86  ls
+   87  ga
+   88  gc ""
+   89  gc "yes"
+   90  gpull
+   91  ..
+   92  cd stocksRails/
+   93  git checkout master
+   94  git log
+   95  ga
+   96  gc "added viewsa and controllers"
+   97  gpush
+   98  rs
+   99  rs
+  100  rs
+  101  bu
+  102  rs
+  103  ga
+  104  gc "implemented navbar"
+  105  git remote add origin git@github.com:bernulander/StockBot.git
+  106  bu
+  107  ls
+  108  ls
+  109  rails generate devise:install
+  110  rails generate devise MODEL
+  111  rails delete devise MODEL
+  112  rails d devise MODEL
+  113  rails generate devise USER
+  114  rails db:migrate
+  115  rs
+  116  rails g migration add_fields_to_user
+  117  rmi
+  118  rails grails g controller user
+  119  rails g controller user
+  120  rmi
+  121  rs
+  122  rs
+  123  rails g controller sessions
+  124  rs
+  125  rails delete controller sessions
+  126  rails d controller sessions
+  127  rs
+  128  rs
+  129  rro
+  130  rs
+  131  ga
+  132  gc "implemented devise functionality"
+  133  ls
+  134  rs
+  135  ls
+  136  ls
+  137  a.
+  138  rs
+  139  rs
+  140  rs
+  141  ga
+  142  gc "lastcommit"
+  143  gpush
+  144   heroku git:remote -a stokbot
+  145  git push heroku master
+  146  bu
+  147  bundle update uglifier
+  148  ga
+  149  gc "bundled uglifier"
+  150  heroku git:remote -a robot-stocks
+  151  git push heroku master
+  152  remote: -----> Using Ruby version: ruby-2.3.3
+  153  remote: -----> Installing dependencies using bu
+  154  remote: -----> Using Ruby version: ruby-2.3.3
+  155  heroku run rails db:migrate
+  156  rs
+  157  bu
+  158  rails generate simple_form:install
+  159  rails delete simple_form:install
+  160  rails d simple_form:install
+  161  rails generate simple_form:install --bootstrap
+  162  bu
+  163  a.
+  164  rs
+  165  rails g model ticker ticker
+  166  rmi
+  167  rc
+  168  rails db:seed
+  169  rc
+  170  rs
+  171  rails g model stocks
+  172  rails d model stocks
+  173  rails g model stocks portfolio
+  174  rmi
+  175  rs
+  176  rs
+  177  rs
+  178  rs
+  179  rs
+  180  ls
+  181  rro
+  182  rails db:rollback
+  183  rails db:rollback
+  184  rails g model portfolio user:references
+  185  rails g model ticker  portfolio:references
+  186  rails g model ticker  portfolio:references
+  187  rmi
+  188  rro
+  189  rro
+  190  rails g model portfolio tickers:array startvalue:float currentvalue:float startdate:datetime enddate:datetime user:references
+  191  rails g model portfolio tickers:array startvalue:float currentvalue:float startdate:datetime enddate:datetime user:references
+  192  rails g model ticker ticker:string portfolio:references
+  193  rmi
+  194  rmi
+  195  rails db:reset
+  196  rmi
+  197  rails db:drop
+  198  rails db:create
+  199  rails db:migrate
+  200  rs
+  201  rails db:seed
+  202  rs
+  203  rails g controller portfolio
+  204  ga
+  205  gc "commit before deleting stocks controller"
+  206  rails d stocks controller
+  207  rails delete stocks controller
+  208  rails d model stock
+  209  rails db:rollback
+  210  rails g model ticker ticker:string portfolio_tickers:references
+  211  rails db:rollback
+  212  rails g model portfolio startvalue:float currentvalue:float startdate:datetime enddate:datetime user:references portfolio_tickers:references
+  213  rails d model portfolio startvalue:float currentvalue:float startdate:datetime enddate:datetime user:references portfolio_tickers:references
+  214  rails d model portfolio startvalue:float currentvalue:float startdate:datetime enddate:datetime user:references
+  215  rails g model portfolio startvalue:float currentvalue:float startdate:datetime enddate:datetime user:references
+  216  rails g model ticker name:string
+  217  rails g model portfolio_tickers portfolio:references tickers:references
+  218  rmi
+  219  bu
+  220  rails db:seed
+  221  git a
+  222  ga
+  223  gc "commit after db changes"
+  224  rails d model portfolio
+  225  rails d model tickers
+  226  rails d model portfolio_tickers
+  227  rails g model portfolio startvalue:float currentvalue:float startdate:datetime enddate:datetime user:references
+  228  rails g model ticker name:string
+  229  rails g model portfolio_tickers portfolio:references tickers:references
+  230  rmi
+  231  rails db:drop
+  232  rails db:seed
+  233  rails db:create
+  234  rails db:migrate
+  235  rails db:seed
+  236  rails g model user_portfolios user:references portfolio:references
+  237  rmi
+  238  rmi
+  239  ga
+  240  gc "last migration"
+  241  rs
+  242  rails db:drop
+  243  rails db:create
+  244  rails db:migrate
+  245  rails db:seed
+  246  ls
+  247  rs
+  248  rs
+  249  rs
+  250  bu
+  251  ga
+  252  gc "added gem, changed routes and controllers"
+  253  ñs
+  254  ks
+  255  ls
+  256  rs
+  257  rails erd
+  258  rs
+  259  rs
+  260  rails delete controller portfolios
+  261  rails d controller portfolios
+  262  rails g controller portfolios
+  263  rs
+  264  rails db:seed
+  265  rc
+  266  ls
+  267  rs
+  268  rs
+  269  rmi
+  270  rmi
+  271  cd /Users/bern/codeCore/week11/day2/AfternoonLecture/awesome_answers_rails
+  272  rails erd
+  273  rc
+  274  rails g migration remove_portfolio_id_from_portfolio_ticker
+  275  rmi
+  276  rmi
+  277  rc
+  278  rc
+  279  rails g migration remove_portfolio_id_column_from_user_portfolio
+  280  rmi
+  281  rc
+  282  rs
+  283  rs
+  284  rs
+  285  rs
+  286  rc
+  287  rs
+  288  rc
+  289  rc
+  290  rs
+  291  rc
+  292  rails db:drop
+  293  rails db:drop
+  294  rails db:create
+  295  rails db:migrate
+  296  rails db:seed
+  297  rs
+  298  rro
+  299  rs
+  300  ga
+  301  gc "refactored lots of code"
+  302  rs
+  303  rs
+  304  ga
+  305  gc "refactored lots of code"
+  306  rs
+  307  ga
+  308  gc "refactored stddev"
+  309  rs
+  310  ga
+  311  gc "refactored variation coefficient"
+  312  rs
+  313  ga
+  314  gc "refactored return"
+  315  rs
+  316  ga gc "refactored hundred dollar test"
+  317  ga
+  318  gc "refactored hundred dollar test"
+  319  rs
+  320  ga
+  321  gc "refactored minimum and max values of graph"
+  322  rs
+  323  ga
+  324  gc "refactored sortino ratio"
+  325  rs
+  326  ga
+  327  gc "refactored hundred dollar graph and numbers"
+  328  rs
+  329  ga
+  330  gc "cleanded controller"
+  331  rs
+  332  rs
+  333  rs
+  334  rs
+  335  rs
+  336  rs
+  337  exit
+  338  ..
+  339  ls
+  340  ..
+  341  ..
+  342  ..
+  343  cd projects/
+  344  ls
+  345  cd stocksRails/
+  346  ls
+  347  ls
+  348  rc
+  349  rs
+  350  rails db:rollback
+  351  rails db:drop
+  352  rails db:create
+  353  rails db:migrate
+  354  rails db:seed
+  355  rs
+  356  rsrc
+  357  rc
+  358  rc
+  359  gs
+  360  ga
+  361  gc "edited chartkick colors"
+  362  rs
+  363  ..
+  364  cd doctorbase_project/
+  365  ls
+  366  git remote
+  367  heroki git remote
+  368  heroku git remote
+  369  heroku git:remote -a doctorbase
+  370  heroku run rails c
+  371  exit
+  372  rro
+  373  rs
+  374  rro
+  375  rro
+  376  rro
+  377  rro
+  378  rc
+  379  rmi
+  380  rails erd
+  381  rails erd
+  382  rails erd
+  383  rs
+  384  ..
+  385  cd /Users/bern/codeCore/week11/day2/AfternoonLecture/awesome_answers_rails
+  386  rc
+  387  ls
+  388  rc
+  389  rc
+  390  ..
+  391  ls
+  392  ..
+  393  ..
+  394  ..
+  395  cd projects/U
+  396  cd projects/Undefined_Drills/
+  397  a.
+  398  open .
+  399  a.
+  400  rs
+  401  ga
+  402  gc "changed background"
+  403  git push heroku master
+  404  git push heroku master
+  405  git push heroku integration/master
+  406  git push heroku master/integration
+  407  git push heroku integration:master
+  408  heroku run rails assets:precompile
+  409  heroku reset
+  410  heroku restart
+  411  rails assets:precompile
+  412  git push heroku integration/master
+  413  git push heroku master/integration
+  414  git push heroku integration:master
+  415  heroku git:remote -a undef-drills
+  416  git push heroku integration:master
+  417  heroku run rails db:migrate
+  418  heroku run rails db:seed
+  419  RAILS_ENV=production bin/rails assets:precompile
+  420  git push heroku integration:master
+  421  git push heroku integration:master
+  422  heroku git:remote -a undefineddrills
+  423  ga
+  424  gc "changed assets"
+  425  gpush
+  426  git push heroku integration:master
+  427   heroku run rails db:migrate
+  428  heroku run rails db:seed
+  429  exit
+  430  rc
+  431  exit
+  432  cd codeCore/projects/stocksRails/
+  433  ls
+  434  a.
+  435  rs
+  436  rs
+  437  rc
+  438  rs
+  439  rails g migration change_start_date_portfolio
+  440  rmi
+  441  rmi
+  442  rs
+  443  ga
+  444  gc "changed stock order in view"
+  445  git push heroku master
+  446  heroku run rails db:migrate
+  447  heroku run rails db:seed
+  448  rs
+  449  heroku run rails c
+  450  rs
+  451  bu
+  452  rails generate validates_timeliness:install
+  453  rs
+  454  ga
+  455  gc "changes on forms"
+  456  git push heroku master
+  457  heroku run rails c
+  458  heroku pg:reset postgresql-dimensional-29236
+  459  heroku restart
+  460  heroku run rails db:migrate
+  461  heroku restart
+  462  heroku run rails db:migrate
+  463  heroku restart
+  464  heroku run rails db:seed
+  465  rs
+  466  ga
+  467  gc "changes"
+  468  rs
+  469  bu
+  470  rs
+  471  ga
+  472  rs
+  473  ga
+  474  gc "refactored code"
+  475  rs
+  476  ga
+  477  gc "fixed variation graph was inverted"
+  478  rs
+  479  ga
+  480  gc "fixed hundred dollar test"
+  481  rs
+  482  ..
+  483  cd
+  484  cd codeCore/projects/stocksRails/
+  485  ls
+  486  ga
+  487  gc "made changes to fundamentals"
+  488  cd codeCore/
+  489  ls
+  490  cd projects/
+  491  ls
+  492  cd stocksRails/
+  493  gs
+  494  git heroku push master
+  495  git push heroku master
+  496  ls
+  497  cd codeCore/projects/stocksRails/
+  498  rs
+  499  top
+  500  ls
+  501  cd codeCore/week12
+  502  ls
+  503  mkdir day1-Exam
+  504  cd day1-Exam/
+  505  a.
+  506  ls
+  507  ls
+  508  rails new biddr
+  509  cd biddr/
+  510  a.
+  511  rails -h
+  512  rails g model -h
+  513  rails g model auction title description:text endson:date reserveprice:float
+  514  bu
+  515  bundle update uglifier
+  516  rs
+  517  rails g controller home index
+  518  rs
+  519  rails generate devise:install
+  520  rails generate devise user
+  521  rails db:migrate
+  522  rails db:create
+  523  rails db:migrate
+  524  rs
+  525  rs
+  526  rs
+  527  rs
+  528  rs
+  529  rs
+  530  rs
+  531  rails g controller auction index show new create
+  532  rs
+  533  rails g migration add_user_references_to_auction
+  534  rails generate migration AddUserReferenceToAuctions user:references
+  535  rmi
+  536  rs
+  537  rails d controller auction index show new create
+  538  rails g controller auctions index show new create
+  539  rs
+  540  bu
+  541  bu
+  542  rs
+  543  rails generate simple_form:install
+  544  rmi
+  545  rs
+  546  rs
+  547  bu
+  548  bu
+  549  rmi
+  550  rs
+  551  rails g model bids
+  552  rails g controller bids
+  553  rails d model bids
+  554  rails d model bid
+  555  rails g model bid
+  556  rails d model bid
+  557  rails g model bid bid:float auction:references
+  558  rails d model bid bid:float auction:references
+  559  rails g model bid bid:float auction:references user:references
+  560  rmi
+  561  rs
+  562  ga
+  563  gi
+  564  ga
+  565  gc "started project, added materialize models and basic controller functionality"
+  566  history > history_for_print.txt

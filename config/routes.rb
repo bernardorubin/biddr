@@ -17,4 +17,7 @@ Rails.application.routes.draw do
     resources :bids, only:[:create, :destroy]
   end
 
+  get 'profile' => 'profile#index'
+  patch 'profile' => 'profile#update'
+
 end

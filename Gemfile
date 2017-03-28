@@ -8,6 +8,14 @@ end
 
 
 # My Gems
+gem 'aasm'
+gem 'cancancan'
+gem 'rspec-rails'
+gem 'factory_girl_rails'
+gem 'faker'
+gem 'rails-controller-testing'
+gem 'nyan-cat-formatter'
+
 gem 'material_icons'
 gem 'simple_form'
 gem 'materialize-sass'

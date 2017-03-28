@@ -1,21 +1,29 @@
 <nav>
   <div class="container">
     <div class="nav-wrapper">
-      <a href="#!" class="brand-logo"><i class="material-icons md-36">monetization_on</i></a>
+      <a href="#!" class="brand-logo center"><i class="material-icons md-36">monetization_on</i></a>
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+      <ul id="nav-mobile" class="left hide-on-med-and-down">
+        <li><%= link_to "Home", root_path %></li>
+        <li><%= link_to "New Auction", new_auction_path %></li>
+        <% if user_signed_in? %>
+        <li><%= link_to "Auctions", auctions_path %></li>
+        <% end  %>
+      </ul>
+
       <ul class="right hide-on-med-and-down">
         <% if user_signed_in? %>
-          <li><%= link_to current_user.email, "/profile" %></li>
-          <li><%= link_to "Cerrar Sesión", destroy_user_session_path, method: 'DELETE' %></li>
+          <li><%= link_to current_user.display_name, "/profile" %></li>
+          <li><%= link_to "Signout", destroy_user_session_path, method: 'DELETE' %></li>
         <% else %>
-          <li><%= link_to "Ingresar", new_user_session_path %></li>
-          <li><%= link_to "Registrarse", new_user_registration_path %> </li>
+          <li><%= link_to "Login", new_user_session_path %></li>
+          <li><%= link_to "Sign Up", new_user_registration_path %> </li>
         <% end %>
       </ul>
       <ul class="side-nav" id="mobile-demo">
         <% if user_signed_in? %>
           <!-- <li><%#= link_to current_user.display_name, "/profile" %></li> -->
-          <li><%= link_to current_user.email, "/profile" %></li>
+          <li><%= link_to current_user.display_name, profile_path %></li>
           <li><%= link_to "Signout", destroy_user_session_path, method: 'DELETE' %></li>
         <% else %>
           <li><%= link_to "Login", new_user_session_path %></li>

@@ -1,0 +1,6 @@
+<h1>Change Profile </h1>
+<%= simple_form_for @user, url: "/profile" do |f|%>
+  <%= f.input :first_name %>
+  <%= f.input :last_name %>
+  <%= f.button :submit %>
+<% end %>

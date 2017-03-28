@@ -1,4 +1,5 @@
 <h1>Auction Show</h1>
+<hr>
 <h2><%= @auction.title %></h2>
 <div class="row">
   <div class="col s6">
@@ -9,30 +10,37 @@
     </p>
   </div>
   <div class="col s6">
-  <p> Current Price </p>
-  <p> Reserve Price Met or Not Met </p>
+  <p> Current Price <%= @auction.currentprice %> </p>
+  <% if @auction.currentprice < @auction.reserveprice %>
+    <p> Reserve Price Not Met</p>
+  <% else %>
+    <p> Reserve Price Met! </p>
+  <% end %>
   </div>
 </div>
+<hr>
+<h4>New Bid</h4>
 <div class="row">
-
+  <div class="col s12">
+    <%= simple_form_for [@auction, @bid] do |f| %>
+    <%= f.input :bid, input_html: {:step => ".01", class: "col s6"}, label_html: {class: "col s1"} %>
+    <%= f.button :submit, class: "col s2 offset-s3" %>
+    <% end %>
+  </div>
 </div>
 
-
+<hr>
+<h4>All Bids</h4>
 <div class="row">
-  <%= simple_form_for [@auction, @bid] do |f| %>
-  <%= f.input :bid %>
-  <%= f.submit :submit %>
-  <% end %>
+  <div class="col s12">
+    <% @auction.bids.each do |bid| %>
+    <%  @username = User.find bid.user_id %>
+      Bid by:  <%= @username.display_name %>
+      <%= bid.bid %>
+      <%# if can?(:manage, bid) %>
+        <%= link_to 'delete', bid_path(bid), method: :delete, data:{ confirm: 'Are You Sure?'}  %>
+      <%# end  %>
+        <hr>
+    <% end  %>
 </div>
-
-<div class="row">
-<% @auction.bids.each do |bid| %>
-<%  @username = User.find bid.user_id %>
-  Bid by:  <%= @username.email %>
-  <%= bid.bid %>
-  <%# if can?(:manage, bid) %>
-    <%= link_to 'delete', bid_path(bid), method: :delete, data:{ confirm: 'Are You Sure?'}  %>
-  <%# end  %>
-    <hr>
-<% end  %>
 </div>
