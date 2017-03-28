@@ -1,6 +1,13 @@
 <h1>All Auctions with Bids</h1>
 <% @auctions.each do |auction|  %>
   <% if auction.bids.length > 0  %>
-  <%= link_to auction.title, auction_path(auction) %> <br>
+    <% if user_signed_in? # && can?(:bookmark, auction) %>
+      <% if auction.bookmarked_by?(current_user)  %>
+        <%= link_to '<i class="material-icons">visibility</i>'.html_safe, bookmark_path(auction.bookmark_for(current_user)), method: :delete %>
+      <% else  %>
+        <%= link_to '<i class="material-icons">visibility_off</i>'.html_safe, auction_bookmarks_path(auction), method: :post %>
+      <% end  %>
+    <% end  %>
+    <%= link_to auction.title, auction_path(auction) %> <br>
   <% end  %>
 <% end  %>

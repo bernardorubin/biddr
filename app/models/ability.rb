@@ -7,9 +7,9 @@ class Ability
 
     user ||= User.new # guest user (not logged in)
 
-  if user.is_admin?
-    can :manage, :all
-  end
+  # if user.is_admin?
+  #   can :manage, :all
+  # end
 
   can :manage, Auction do |p|
    p.user == user
@@ -23,10 +23,9 @@ class Ability
    p.user == user
   end
 
-
-
-
-
+  cannot :bookmark, Auction do |p|
+   p.user == user
+  end
 
     #   user ||= User.new # guest user (not logged in)
     #   if user.admin?

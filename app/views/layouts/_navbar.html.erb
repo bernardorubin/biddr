@@ -1,5 +1,5 @@
 <nav>
-  <div class="container">
+
     <div class="nav-wrapper">
       <a href="#!" class="brand-logo center"><i class="material-icons md-36">monetization_on</i></a>
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
@@ -7,7 +7,8 @@
         <li><%= link_to "Home", root_path %></li>
         <li><%= link_to "New Auction", new_auction_path %></li>
         <% if user_signed_in? %>
-        <li><%= link_to "Auctions", auctions_path %></li>
+        <li><%= link_to "All Auctions", auctions_path %></li>
+        <li> <%= link_to 'Watching Auctions', user_bookmarks_path(current_user) %></li>
         <% end  %>
       </ul>
 
@@ -31,5 +32,5 @@
         <% end %>
       </ul>
     </div>
-  </div>
+
 </nav>

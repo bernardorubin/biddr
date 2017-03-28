@@ -8,10 +8,14 @@ class BidsController < ApplicationController
     @bid.auction      = @auction
     @bid.user         = current_user
     @username         = User.find @auction.user_id
-    if @bid.bid >= @auction.reserveprice
-      @auction.metreserve
+    if cannot? :bid, @auction
+      redirect_back fallback_location: auctions_path(@auction), alert: 'Bidding your own product is frowned upon'
+      return
     end
     if @bid.save
+      if @bid.bid >= @auction.reserveprice
+        @auction.metreserve
+      end
       @auction.currentprice = @bid.bid
       @auction.save
       redirect_to auction_path(@auction), notice: 'Bid created!'

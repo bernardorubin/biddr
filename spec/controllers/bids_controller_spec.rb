@@ -18,9 +18,7 @@ RSpec.describe BidsController, type: :controller do
         it 'create a new bid in the database' do
           count_before = Bid.count
   #  Validation failed: Email has already been taken
-          # auction = create(:auction)
-          # bid = create(:bid)
-          post :create#, params: { auction_id: auction }
+          bid = create(:bid)
   #  No route matches {:action=>"create", :controller=>"bids"}
           count_after = Bid.count
           expect(count_after).to eq(count_before + 1)
